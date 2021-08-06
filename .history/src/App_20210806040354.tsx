@@ -22,7 +22,7 @@ export const AuthContext = createContext({} as AuthContextType);
 function App() {
   const [user, setUser] = useState<User>();
 
-  useEffect(() =>{    //fica monitorando se ja existia um login para o user
+  useEffect(() =>{
     auth.onAuthStateChanged(user => {
       if (user){
         const { displayName, photoURL, uid } = user
